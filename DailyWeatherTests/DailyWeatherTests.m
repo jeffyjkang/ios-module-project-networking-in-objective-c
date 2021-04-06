@@ -7,6 +7,9 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "LSIFileHelper.h"
+#import "LSILog.h"
+#import "LSIWeatherForcast.h"
 
 @interface DailyWeatherTests : XCTestCase
 
@@ -20,6 +23,11 @@
     
     // TODO: Create Unit Tests for each separate JSON file
 
+}
+
+- (void)testCurrentWeather
+{
+    NSData * currentWeatherData = loadFile(@"CurrentWeather.json", DailyWeatherTests.class);
 }
 
 @end
